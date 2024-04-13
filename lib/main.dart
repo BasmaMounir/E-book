@@ -1,3 +1,4 @@
+import 'package:e_book/constants.dart';
 import 'package:e_book/features/splash/presntation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -12,8 +13,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
-      home: SplashView(),
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData().copyWith(
+        scaffoldBackgroundColor: kPrimaryColor
+      ),
+      home:const SplashView(),
     );
   }
 }
